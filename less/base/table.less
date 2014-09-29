@@ -1,0 +1,47 @@
+/*
+
+--- Tabulka ---
+
+*/
+
+table {
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
+
+td,
+th {
+  font: 12px/18px Arial, sans-serif;
+  text-align: left;
+  padding: 10px 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+td,
+th {
+	img {
+		vertical-align: middle;
+	}
+}
+
+
+// --- Tabulka s poradim ---
+
+.table-order td.score {
+	text-align: center;
+}
+
+.table-order td.points {
+	text-align: right;
+}
+
+.team-logo,
+.matches-draw,
+.matches-win,
+.matches-loose {
+  @media screen and (max-width: 319px) {
+    display: none;
+  }
+}
+
