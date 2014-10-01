@@ -36,11 +36,28 @@ th {
 	text-align: right;
 }
 
-.team-logo,
-.matches-draw,
-.matches-win,
-.matches-loose {
-  @media screen and (max-width: 319px) {
+// Schovavame logo tymu
+.hideTeamLogo() {
+  .team-logo {
+    width: 0;
+    padding: 0;
+    
+    img {
+      display: none;
+    }
+  }  
+}  
+
+
+@media screen and (max-width: 280px) {
+  .hideTeamLogo;
+}  
+
+@media @largeUp and (max-width: 920px) {
+  .hideTeamLogo;
+  .matches-win,
+  .matches-draw,
+  .matches-loose {
     display: none;
   }
 }
