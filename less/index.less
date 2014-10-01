@@ -1,5 +1,10 @@
 /* Sports Weekly stylopis */
 
+@largeUp: ~"screen and (min-width: 550px)";
+
+// Knihovny
+@import "core/helpers";
+
 // Sjednoceni zobrazovani ve vsech prohlizecich
 @import (less) "../lib/normalize/normalize.css";
 
@@ -8,5 +13,15 @@
 @import "base/table";
 @import "base/map";
 
+// UI komponenty
+@import "components/foot";
+@import "components/gallery";
+@import "components/head";
+@import "components/nav";
+@import "components/photo";
+@import "components/similar-articles";
+
 // Layout
-@import "layout/layout";
+@media @largeUp {
+	@import "layout/layout";
+}
