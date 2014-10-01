@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css">
 
+    <meta name="viewport" content="width=device-width">
+
+    <script src="js/respond.js"></script>
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill-2.js" async></script>
+
   </head>
 
   <body>
@@ -54,7 +63,15 @@
 
         <p class="photo">
           <a class="fancybox" href="img/plzen_1.jpg">
-            <img src="img/plzen_1.jpg" alt="Plzeň">
+            <img 
+              xxxsrc="img/plzen_1.jpg"
+              srcset="img/plzen_1.jpg 600w,
+                img/plzen_1_small.jpg 480w" 
+              sizes="
+                (min-width: 550px) calc((100vw - 2*10px)*0.5510204081632652),
+                calc(100vw - 2*10px)
+                "
+              alt="Plzeň">
           </a>
         </p>
 
@@ -191,7 +208,7 @@
 
             <tr>
               <td class="minute">51.</td>
-              <td class="team"><img src="img/icons/plzen_25.png" alt="Plzeň" height="25"></td>
+              <td class="team"><img src="img/icons/plzen.svg" onerror="this.onerror=null; this.src='plzen_25.png'" alt="Plzeň" height="25"></td>
               <td class="player">Kovařík</td>
               <td class="score">1:0</td>
             </tr>
